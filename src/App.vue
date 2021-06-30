@@ -3,7 +3,7 @@
     <img src="./assets/logo.png" />
     <h1>{{ msg }}</h1>
 
-    <drop-down-menu @command-change="dropDownHandler"></drop-down-menu>
+    <drop-down-menu @command-change="dropDownHandler"> Choose </drop-down-menu>
   </div>
 </template>
 

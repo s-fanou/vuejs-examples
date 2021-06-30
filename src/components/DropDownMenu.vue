@@ -1,6 +1,7 @@
 <template>
   <div style="color: black">
     <select @change="commandChange" v-model="selectedCommand">
+      <option value=""><slot></slot></option>
       <option value="logout">Logout</option>
       <option value="other">Other</option>
     </select>
