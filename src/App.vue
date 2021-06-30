@@ -1,31 +1,44 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
+    <img src="./assets/logo.png" />
     <h1>{{ msg }}</h1>
 
-    <sot-message> This is my message </sot-message>
-    
+    <drop-down-menu @command-change="dropDownHandler"></drop-down-menu>
   </div>
 </template>
 
 <script>
-
-import SotMessage from './components/Message';
+import DropDownMenu from "./components/DropDownMenu.vue";
 
 export default {
-  name: 'app',
-  components: { SotMessage },
-  data () {
+  name: "app",
+  components: { DropDownMenu },
+  data() {
     return {
-      msg: 'Sot-App'
-    }
-  }
-}
+      msg: "Sot-drop down menu with event emit",
+    };
+  },
+  methods: {
+    dropDownHandler(selectedCommand) {
+      switch (selectedCommand) {
+        case "logout":
+          //this.logOutHandler();
+          alert("logout command chosen");
+          break;
+        case "other":
+          alert("Other command chosen");
+          break;
+        default:
+          alert("Error!");
+      }
+    },
+  },
+};
 </script>
 
 <style lang="scss">
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -33,7 +46,8 @@ export default {
   margin-top: 60px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 
