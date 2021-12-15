@@ -5,9 +5,9 @@
     </header>
     <ul>
       <friend-contact
-        name="Manuel Lorenz"
-        phone-number="01234 78992"
-        email-address="manuel@localhost.com"
+        :name="friends[0].name"
+        :phone-number="friends[0].phone"
+        :email-address="friends[0].email"
       ></friend-contact>
       <friend-contact
         name="Julie Jones"
@@ -27,17 +27,17 @@ export default {
           id: "manuel",
           name: "Manuel Lorenz",
           phone: "0123 45678 90",
-          email: "manuel@localhost.com",
+          email: "manuel@localhost.com"
         },
         {
           id: "julie",
           name: "Julie Jones",
           phone: "0987 654421 21",
-          email: "julie@localhost.com",
-        },
-      ],
+          email: "julie@localhost.com"
+        }
+      ]
     };
-  },
+  }
 };
 </script>
 
