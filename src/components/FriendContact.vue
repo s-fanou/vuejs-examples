@@ -1,6 +1,6 @@
 <template>
   <li>
-    <h2>{{ name }}</h2>
+    <h2>{{ friendName }}</h2>
     <button @click="toggleDetails">{{ detailsAreVisible ? 'Hide' : 'Show' }} Details</button>
     <ul v-if="detailsAreVisible">
       <li>
@@ -22,6 +22,11 @@ export default {
     return {
       detailsAreVisible: false
     };
+  },
+  computed: {
+    friendName() {
+      return this.name + " Surname";
+    }
   },
   methods: {
     toggleDetails() {
