@@ -1,3 +1,5 @@
+My simple clear examples to understand different Vue concepts and to have a simple piece of code I can refer to.
+
 # sot-app
 
 > A Vue.js project
